@@ -3,24 +3,24 @@
  <head>
   <meta charset="utf-8">
   <script> type = "text/javascript"
-  function show () {
-    document.write("You are best!");
 
+
+  var count = 0;
+
+  function show (element) {
+    count++;
+    element.innerHTML = "Work func; count " + count + ".";
   }
+
  </script>
 
   <title>Пример страницы</title>
 
-  <style>
-  p { color:  navy; }
-  </style>
-
-
  </head>
- <body>
-  <input type = "button" name = "value_b" value = "cl" onclick="show" />
+ <body onload="alert('Page is unload')">
+  <span onmouseover="show(this)"> work method  </span>
+  <input type = "button" name = "value_b" value = "cl" onclick="show(this)" />
 
 
-  <p>Страница на HTML5</p>
  </body>
 </html>
