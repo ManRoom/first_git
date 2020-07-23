@@ -3,18 +3,10 @@
  <head>
   <meta charset="utf-8">
   <script> type = "text/javascript"
-   function show() {
-    let listNames = new Array("apple", "strawberry", "cherry");
+  function show () {
+    document.write("You are best!");
 
-for(let i = 0; i < listNames.length; i++) {
-//alert((listNames[i]) + " & ");
-  document.write((listNames[i]) + "<br/>");
-}
-   }
-
-
- 
-    
+  }
  </script>
 
   <title>Пример страницы</title>
@@ -26,6 +18,9 @@ for(let i = 0; i < listNames.length; i++) {
 
  </head>
  <body>
+  <input type = "button" name = "value_b" value = "cl" onclick="show" />
+
+
   <p>Страница на HTML5</p>
  </body>
 </html>
