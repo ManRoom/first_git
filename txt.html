@@ -3,25 +3,24 @@
  <head>
   <meta charset="utf-8">
   <script> type = "text/javascript"
-
-
-  var count = 0;
-
-  function show (element) {
-    count++;
-    element.innerHTML = "Work func; count " + count + ".";
+  function show(form) {
+    var value = form.name_id.value
+    if(!value) {
+      alert("Value is empty!");
+      //window.location = "https://www.deezer.com/ru/profile/1920840442/loved"
+    }
   }
-
  </script>
 
   <title>Пример страницы</title>
 
  </head>
- в
- <body onload="alert('Page is unload')">
-  <span onmouseover="show(this)"> work method  </span>
-  <input type = "button" name = "value_b" value = "cl" onclick="show(this)" />
 
-
+<form action="" method = "post" name = "test" onsubmit="show(this)" id = "form">
+  <label for = "str"> you str</label>
+  <input type = "text" name = "name" placeholder="Name" id ="name_id">
+  <input type = "radio" name = "select">
+  <input type = "button" onclick="show(document.getElementById('form'))" name = "done" id = "12344" value = "Done">
+</form>
  </body>
 </html>
